@@ -1223,7 +1223,9 @@
             </plugin>
         </plugins>
     </reporting>
-
+    <properties>
+        <sonar.organization>cognia-security-team</sonar.organization>
+    </properties>
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <java.target>8</java.target>
