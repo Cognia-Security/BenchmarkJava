@@ -18,11 +18,23 @@ public class SonarQubeResult {
     @JsonDeserialize(using = KeepAsJsonDeserializer.class)
     public List<String> hotspots;
 
+    @JsonAlias("total")
+    public Integer totalResults;
+
+    @JsonAlias("ps")
+    public Integer pageSize;
+
+    @JsonAlias("p")
+    public Integer pageIndex;
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Paging {
 
         @JsonAlias("total")
         public int resultCount;
+
+        @JsonAlias("pageSize")
+        public int pageSize;
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
